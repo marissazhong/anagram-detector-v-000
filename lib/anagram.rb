@@ -7,7 +7,7 @@ class Anagram
   def match(matches)
     matches.map! {|word| word.length == @word.length ? word.split('').sort : word = ""}
     matches = matches.reject {|word| word.empty?}
-    word = word.split('').sort
+    @word = word.split('').sort
     matches = matches.each {|match| word = "" if match != word}
     matches = matches.reject {|word| word.empty?}
   end
