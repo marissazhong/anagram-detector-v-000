@@ -5,6 +5,7 @@ class Anagram
     @word = word
   end
   def match(words)
-    
+    words = words.split(' ')
+    words.map! {|word| word.split('')}
   end
 end
