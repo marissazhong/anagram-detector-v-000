@@ -6,7 +6,11 @@ class Anagram
   end
   def match(matches)
     @word = @word.split('').sort
-    matches.map! {|word| word = 'no match' if word.split('').sort != @word }
+    matches.map! {|word|
+      word = 'no match' if word.split('').sort != @word
+      puts word
+      puts @word
+    }
     matches = matches.reject {|word| word == 'no match'}
     puts matches
   end
