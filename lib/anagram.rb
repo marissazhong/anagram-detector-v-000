@@ -6,6 +6,6 @@ class Anagram
   end
   def match(words)
     words = words.split(' ')
-    words.map! {|word| word.split('').sort}
+    words.map! {|word| word.length = @word.length ? word.split('').sort : delete(word)}
   end
 end
