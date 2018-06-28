@@ -5,7 +5,7 @@ class Anagram
     @word = word
   end
   def match(words)
-    puts words
+    puts @word.length
     words.map! {|word| word.length == @word.length ? word.split('').sort : words.delete(word)}
     puts words.length
   end
