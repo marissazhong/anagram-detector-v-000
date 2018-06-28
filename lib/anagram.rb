@@ -10,9 +10,9 @@ class Anagram
     @word = @word.split('').sort
     matches = matches.each {|match| word = "" if match != word}
     matches = matches.reject {|word| word.empty?}
-    puts matches
+
   end
 end
 
 diaper = Anagram.new('diaper')
-diaper.match(%w(hello world zombies pants dipper))
+diaper.match(%w(hello world zombies pants dipper dipper))
