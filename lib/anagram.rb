@@ -5,14 +5,10 @@ class Anagram
     @word = word
   end
   def match(matches)
-    matches.map! {|word| word.length == @word.length ? word.split('').sort : word = ""}
-    matches = matches.reject {|word| word.empty?}
     @word = @word.split('').sort
-    matches = matches.each {|match| @word = "" if match != @word}
+    matches.map! {|word| word = '' if word.split('').sort != @word }
     matches = matches.reject {|word| word.empty?}
-    matches = matches.each {|match| match.join("")}
-
-    
+    puts matches
   end
 end
 
