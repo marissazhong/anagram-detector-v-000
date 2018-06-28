@@ -10,6 +10,7 @@ class Anagram
       word = 'no match' if word.split('').sort != @word
       puts word
     }
+    puts matches
     matches = matches.reject {|word| word == 'no match'}
     puts matches
   end
