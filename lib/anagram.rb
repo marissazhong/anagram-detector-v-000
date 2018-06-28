@@ -8,7 +8,6 @@ class Anagram
     @word = @word.split('').sort
     matches.map! {|word|
       word = 'no match' if word.split('').sort != @word
-      puts word
     }
     puts matches
     matches = matches.reject {|word| word == 'no match'}
