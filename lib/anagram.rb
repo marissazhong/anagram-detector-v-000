@@ -4,7 +4,7 @@ class Anagram
   def initialize(word)
     @word = word
   end
-  def match(words)
+  def match(matches)
     matches.map! {|word| word.length == @word.length ? word.split('').sort : word = ""}
     matches = matches.reject {|word| word.empty?}
     word = word.split('').sort
