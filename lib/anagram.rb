@@ -11,7 +11,8 @@ class Anagram
     matches = matches.each {|match| @word = "" if match != @word}
     matches = matches.reject {|word| word.empty?}
     matches = matches.each {|match| match.join("")}
-    puts matches
+
+    
   end
 end
 
