@@ -5,8 +5,11 @@ class Anagram
     @word = word
   end
   def match(words)
-    words = words.each_with_index.map {|word, index| word.length == @word.length ? word.split('').sort : word = ""}
-    words = words.reject {|word| word.empty?}
+    matches = matches.each_with_index.map {|word, index| word.length == @word.length ? word.split('').sort : word = ""}
+    matches = matches.reject {|word| word.empty?}
+    word = word.split('').sort
+    matches = matches.each {|match| word = "" if match != word}
+    matches = matches.reject {|word| word.empty?}
   end
 end
 
