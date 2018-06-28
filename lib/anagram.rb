@@ -5,10 +5,10 @@ class Anagram
     @word = word
   end
   def match(matches)
-    matches.map! {|word| puts word.split("").sort }
-    #if word.split("").sort != @word.split("").sort
+    @word = @word.split('').sort
+    matches.map! {|word| word = '' if word.split('').sort != @word }
     matches = matches.reject {|word| word.empty?}
-    puts matches
+    put matches
   end
 end
 
