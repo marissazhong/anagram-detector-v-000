@@ -5,9 +5,8 @@ class Anagram
     @word = word
   end
   def match(words)
-    words.map! {|word| word.length == @word.length ? puts "yes" : puts "no"}
+    words.map! {|word| word.length == @word.length ? puts ("yes") : puts "no"}
     #word.split('').sort : words.delete(word)
-    puts words.length
   end
 end
 
