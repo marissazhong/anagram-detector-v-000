@@ -6,9 +6,7 @@ class Anagram
   end
   def match(matches)
     @word = @word.split('').sort
-    matches.map! {|word|
-      word = 'no match' if word.split('').sort != @word
-    }
+    matches.map! {|word| word.split('').sort != @word ? word = 'no match' : word}
     puts matches
     matches = matches.reject {|word| word == 'no match'}
     #puts matches
