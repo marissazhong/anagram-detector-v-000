@@ -12,7 +12,7 @@ class Anagram
       puts @word
     }
     matches = matches.reject {|word| word == 'no match'}
-    puts matches
+    #puts matches
   end
 end
 
